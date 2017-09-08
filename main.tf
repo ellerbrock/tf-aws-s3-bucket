@@ -1,11 +1,12 @@
-# create s3 bucket
-resource "aws_s3_bucket" "bucket" {
-  bucket = "${var.bucket_name}"
-  acl    = "${var.bucket_acl}"
+resource "aws_s3_bucket" "main" {
+  bucket = "${var.name}"
+  acl    = "${var.acl}"
 
   versioning {
-    enabled = "${var.bucket_enable_versioning}"
+    enabled = "${var.enable_versioning}"
   }
 
-  tags = "${var.bucket_tags}"
+  tags = "${var.tags}"
+
+  #   lifecycle = "${var.lifecycle}"
 }

@@ -12,10 +12,10 @@ module "aws_s3" {
   source = "github.com/ellerbrock/tf-aws-s3-bucket"
   
   # configuration
-  bucket_name = "com.github.ellerbrock"
-  bucket_acl  = "private"
+  name = "tld.domain.service.env"
+  acl  = "private"
 
-  bucket_tags = {
+  tags = {
     terraform = "true"
   }
 }

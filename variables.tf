@@ -1,19 +1,24 @@
-# s3 default settings
-variable "bucket_name" {
+variable "name" {
   description = "bucket name"
+  default     = ""
 }
 
-variable "bucket_acl" {
-  default     = "private"
+variable "acl" {
   description = "bucket acl"
+  default     = "private"
 }
 
-variable "bucket_enable_versioning" {
-  default     = "false"
+variable "enable_versioning" {
   description = "enable bucket versioning"
+  default     = "false"
 }
 
-variable "bucket_tags" {
-  type        = "map"
+variable "tags" {
   description = "tags"
+  default     = {}
+}
+
+variable "lifecycle" {
+  description = "lifecycle"
+  default     = {}
 }
